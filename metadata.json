@@ -1,0 +1,6 @@
+{
+  "name": "Microsoft Windows 98 Second Edition",
+  "description": "An authentic interactive recreation of Microsoft Windows 98 Second Edition with classic desktop applications, Super Mario Bros, MS-DOS prompt, boot screen, and original sounds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --win98-bg: #008080;
+    --win98-gray: #c0c0c0;
+    --win98-dark-gray: #808080;
+    --win98-black: #000000;
+    --win98-white: #ffffff;
+    --win98-blue-dark: #000080;
+    --win98-blue-light: #1084d0;
+  }
+
+  body {
+    font-family: 'MS Sans Serif', Tahoma, 'Segoe UI', Arial, sans-serif;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--win98-bg);
+  }
+}
+
+/* Authentic Win98 bevel utilities */
+.win98-box-raised {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  box-shadow: inset -1px -1px 0px 0px #000000, inset 1px 1px 0px 0px #dfdfdf;
+}
+
+.win98-box-sunken {
+  background-color: #ffffff;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 0px 0px #000000, inset -1px -1px 0px 0px #dfdfdf;
+}
+
+.win98-box-sunken-gray {
+  background-color: #c0c0c0;
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 0px 0px #000000, inset -1px -1px 0px 0px #dfdfdf;
+}
+
+.win98-btn {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset 1px 1px 0px 0px #dfdfdf, inset -1px -1px 0px 0px #808080;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.win98-btn:active, .win98-btn-pressed {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px 0px 0px #808080;
+  padding-top: calc(0.25rem + 1px);
+  padding-left: calc(0.5rem + 1px);
+}
+
+.win98-title-active {
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+}
+
+.win98-title-inactive {
+  background: linear-gradient(90deg, #808080 0%, #b5b5b5 100%);
+  color: #d4d0c8;
+}
+
+/* CRT Scanlines simulation */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.04));
+  background-size: 100% 3px, 6px 100%;
+  z-index: 99999;
+}
+
+/* Retro scrollbars */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  background-image: repeating-linear-gradient(45deg, #c0c0c0, #c0c0c0 1px, #e0e0e0 1px, #e0e0e0 2px);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  height: 16px;
+  width: 16px;
+}
